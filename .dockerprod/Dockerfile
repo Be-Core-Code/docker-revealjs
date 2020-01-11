@@ -13,7 +13,7 @@ WORKDIR $APP_PATH
 
 COPY --chown=node . $APP_PATH
 
-RUN npm install
+RUN npm install && npm audit fix
 
 EXPOSE $APP_PORT
 
